@@ -6,10 +6,10 @@ output:
     social: menu
     df_print: paged
     navbar:
-    - {title: "CCI", align: left, href: "https://cci-dev.org"}
-    - {title: "Defenders", align: left, href: "http://www.defenders.org"}
+    - {title: "CCI", align: left, href: "https://cci-dev.org", target: "_blank"}
+    - {title: "Defenders", align: left, href: "http://www.defenders.org", target: "_blank"}
     - {title: "", icon: "fa-question-circle fa-lg", align: right, href: "mailto:esa@defenders.org?subject=ESA intrastate species"}
-    - {title: "", icon: "fa-github fa-lg", align: right, href: "https://github.com/Defenders-ESC/"}
+    - {title: "", icon: "fa-github fa-lg", align: right, href: "https://github.com/Defenders-ESC/", target: "_blank"}
 runtime: shiny
 ---
 
