@@ -162,9 +162,9 @@ grp <- data_frame(
 show <- left_join(show, grp, by = "scientific")
 show <- with(show, tibble(
   state = state, 
-  common, 
-  scientific, 
-  taxon.x #,
+  common = common, 
+  scientific = scientific, 
+  taxon = taxon.x #,
   # URL = paste0("<a target='_blank' href='", scientific_name_url, "'>ECOS Link</a>")
 ))
 
