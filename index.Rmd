@@ -19,11 +19,7 @@ library(rvest)
 library(shiny)
 library(tibble)
 
-# pg <- read_html("https://ecos.fws.gov/ecp/pullreports/catalog/species/report/species/export?format=htmltable&distinct=true&columns=%2Fspecies%40cn%2Csn%2Cstatus%2Cdesc%2Clisting_date%3B%2Fspecies%2Frange_state%40name%3B%2Fspecies%2Ffws_region%40desc%3B%2Fspecies%2Ftaxonomy%40group%3B%2Fspecies%2Frange_state%40abbrev&sort=%2Fspecies%40sn%20asc&filter=%2Fspecies%40status%20in%20('Endangered'%2C'Threatened')&filter=%2Fspecies%40country%20!%3D%20'Foreign'")
-# dat <- html_table(pg)[[1]]
-# saveRDS(dat, "state_occ.rds")
 dat <- readRDS("state_occ.rds")
-
 names(dat) <- c("common", "scientific", "status", "entity", "listing_date", 
                 "state", "region", "taxon", "st_abb")
 dat <- filter(dat, region != "National Oceanic and Atmospheric Administration")
@@ -150,7 +146,7 @@ renderPlotly({
 ```
 
 
-Species Table
+Data
 =======================================================================
 
 Column {data-width=1000}
